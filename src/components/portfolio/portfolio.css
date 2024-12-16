@@ -1,0 +1,367 @@
+/* General Styles */
+section#portfolio {
+    text-align: center;
+}
+
+.portfolio__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+/* Portfolio Item Styles */
+.portfolio__item {
+    background: var(--color-bg-variant);
+    padding: 1.3rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.portfolio__item:hover {
+    border-color: var(--color-primary-variant);
+    background: transparent;
+}
+
+.portfolio__item-image {
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.portfolio__item h3 {
+    margin: 1.2rem 0 2rem;
+}
+
+.portfolio__item-cta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    height: 3.5rem;
+}
+
+/* Skills Styling */
+.portfolio__item-skills {
+    color: var(--color-primary);
+    font-size: 2rem;
+    padding-right: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .portfolio__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .portfolio__container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #333;
+    /* Ensure text is dark for readability */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: cornflowerblue;
+    /* Change close button color for better visibility */
+}
+
+/* Body Background */
+body {
+    background-color: #f0f0f0;
+    /* Light gray background for contrast */
+}
+
+
+.accordion {
+    margin: 1rem 0;
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    /* Border around each item */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    /* Ensures no overflow */
+}
+
+.accordion-button {
+    background: #f9f9f9;
+    /* Background color */
+
+
+    border: none;
+    /* No border */
+    width: 100%;
+    /* Full width */
+    padding: 1rem;
+    /* Padding for spacing */
+    text-align: left;
+    /* Align text to left */
+    cursor: pointer;
+    /* Cursor changes to pointer */
+    display: flex;
+    /* Flexbox for layout */
+    justify-content: space-between;
+    /* Space between items */
+    align-items: center;
+    /* Center vertically */
+    font-size: 1.1rem;
+    /* Font size */
+    transition: background 0.3s;
+    /* Transition effect */
+}
+
+.accordion-button:hover {
+    background: #e0e0e0;
+    /* Change background on hover */
+}
+
+.accordion-content {
+    display: flex;
+    /* Flexbox for dimension labels and values */
+    justify-content: space-between;
+    /* Space between labels and values */
+    width: 100%;
+    /* Full width */
+}
+
+.dimension {
+    display: flex;
+    /* Flexbox for label and value */
+    flex-direction: column;
+    /* Stack label above value */
+}
+
+.dimension-label {
+    font-weight: bold;
+    /* Bold for labels */
+}
+
+.dimension-value {
+    font-size: 1rem;
+    /* Font size for values */
+}
+
+.accordion-detail {
+    padding: 1rem;
+    /* Padding for detail section */
+    background: #f1f1f1;
+    /* Light background for details */
+    display: none;
+    /* Hidden by default */
+}
+
+.accordion-detail.open {
+    display: block;
+    /* Show when open */
+}
+
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Darker background with transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+/* Modal Content Styling */
+.modal-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 24px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+    color: #333;
+    margin: 20px auto;
+    text-align: center;
+    /* Center align the text */
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+    /* Add spacing below the title */
+}
+
+.spacer {
+    height: 20px;
+    /* Blank space between title and description */
+}
+
+.modal-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    /* Improve readability */
+}
+
+
+/* Accordion Styles */
+.accordion {
+    margin: 20px 0;
+    /* Increased margin for spacing */
+}
+
+.accordion-item {
+    border: 1px solid #e0e0e0;
+    /* Light border for a modern look */
+    border-radius: 6px;
+    /* Slightly more rounded corners */
+    margin-bottom: 16px;
+    /* Balanced spacing between items */
+    overflow: hidden;
+    /* Clean cutoff for overflow */
+    background: #f9f9f9;
+    /* Subtle background for accordion item */
+    transition: box-shadow 0.3s ease-in-out;
+    /* Smooth hover effect */
+}
+
+.accordion-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Add depth on hover */
+}
+
+.accordion-button {
+    background: #ffffff;
+    /* Crisp white background */
+    border: none;
+    /* No border for a flat look */
+    padding: 16px 20px;
+    /* Consistent spacing for padding */
+    width: 100%;
+    /* Full-width button */
+    text-align: left;
+    /* Align text to the left */
+    font-size: 1.2rem;
+    /* Slightly larger font for readability */
+    font-weight: 500;
+    /* Medium font weight for emphasis */
+    color: #444;
+    /* Subtle dark gray text */
+    display: flex;
+    /* Flex layout for icon alignment */
+    justify-content: space-between;
+    /* Space between text and icon */
+    align-items: center;
+    /* Center items vertically */
+    cursor: pointer;
+    /* Pointer cursor for clarity */
+    transition: background 0.3s ease, color 0.3s ease;
+    /* Smooth transitions */
+}
+
+.accordion-button:hover {
+    background: #f1f1f1;
+    /* Light hover background */
+    color: #222;
+    /* Slightly darker text on hover */
+}
+
+.accordion-content {
+    display: flex;
+    /* Flex layout for content */
+    flex-wrap: wrap;
+    /* Allow wrapping for responsiveness */
+    justify-content: space-between;
+    /* Space out items evenly */
+    padding: 16px 20px;
+    /* Consistent padding */
+    background: #fafafa;
+    /* Very light background for content */
+    font-size: 1rem;
+    /* Standard font size */
+    color: #555;
+    /* Subtle gray text */
+}
+
+/* Dimension Styles */
+.dimension {
+    display: flex;
+    /* Flex layout for label and value */
+    flex-direction: column;
+    /* Stack label above value */
+    margin: 10px 0;
+    /* Spacing between items */
+    width: 48%;
+    /* Adjust for two-column layout */
+}
+
+.dimension-label {
+    font-weight: bold;
+    /* Bold text for labels */
+    margin-bottom: 4px;
+    /* Spacing below label */
+    color: #333;
+    /* Dark gray text for labels */
+}
+
+.dimension-value {
+    font-size: 1rem;
+    /* Standard size for values */
+    color: #666;
+    /* Slightly lighter gray for values */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .accordion-content {
+        flex-direction: column;
+        /* Stack items vertically on small screens */
+    }
+
+    .dimension {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+}

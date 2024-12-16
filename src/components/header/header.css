@@ -1,0 +1,124 @@
+/* ========== HEADER STYLING ========== */
+header {
+    height: 100vh;
+    padding-top: 1rem;
+    overflow: hidden;
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem; /* Space between phone number and content */
+}
+
+/* ===== CTA ===== */
+.cta {
+    margin-top: 3.5rem;
+    display: flex;
+    gap: 4.2rem; /* Corrected gap spacing */
+    justify-content: center;
+}
+
+/* Header Socials */
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom:7.3rem;
+}
+
+.header__socials::after {
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+/* Me (Image Container) */
+.me {
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 24rem;
+    height: 21rem;
+    position: absolute;
+    left: calc(50% - 12rem);
+    margin-top: 4rem;
+    border-radius: 8rem 8rem 0 0;
+    overflow: hidden;
+    padding: 5rem 1.5rem 1.5rem;
+}
+
+/* Scroll Down */
+.scroll_down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 10rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+/* ========== PHONE NUMBER (NAVBAR STYLE) ========== */
+.phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d1f2a;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    max-width: fit-content;
+    margin: 1rem auto;
+    cursor: pointer;
+    animation: slideLeftRight 2s ease-in-out infinite;
+}
+
+.phone:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+}
+
+.phone svg {
+    margin-right: 8px;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+/* Slide Animation */
+@keyframes slideLeftRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    header {
+        height: 68vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .phone {
+        font-size: 1rem;
+        padding: 8px 16px;
+        animation: none; /* Remove animation on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 100vh;
+    }
+    .header__socials, .scroll_down {
+        display: none;
+    }
+}

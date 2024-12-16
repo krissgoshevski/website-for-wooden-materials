@@ -1,0 +1,323 @@
+section#about {
+    text-align: center;
+}
+
+
+/* About Container Styles */
+.about__container {
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+}
+
+/* About Me Styles */
+.about__me {
+    width: 100%;
+    height:400px;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+    
+    display: grid;
+    place-items: center;
+}
+
+/* About Me Image Styles */
+.about__me-image {
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+
+.about__me-image:hover {
+    transform: rotate(0);
+}
+
+.about__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.about__card {
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: var(--transition);
+
+}
+
+.about__card:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.about__icon {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.about__card h5 {
+    font-size: 0.95rem;
+}
+
+.about__card small {
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+
+.about__content p {
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light)
+}
+
+
+/*============= MEDIA QUERIES (medium devices as tablet)============= */
+
+@media screen and (max-width:1024px) {
+    .about__container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .about__me {
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+
+    .about__content p {
+        margin: 1rem 0 1.5rem;
+
+    }
+}
+
+.p__about-me {
+
+    text-align: justify;
+}
+
+/*============= MEDIA QUERIES (small devices as phone)============= */
+
+@media screen and (max-width:600px) {
+    .about__me {
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+
+    .about__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .about__content {
+        text-align: center;
+
+    }
+
+    .about__content p {
+        margin: 1.5rem 0;
+    }
+}
+
+
+
+.grid {
+    display: flex; /* Користење на flexbox */
+    justify-content: center; /* Центрирање на колоните */
+    gap: 2rem;
+}
+
+.card {
+    background: var(--color-bg-variant);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    max-width: 300px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-description {
+    font-size: 1rem;
+}
+
+/* Ensure the .offer__section is centered after the .history__section */
+.offer__section {
+    margin: 0 auto; /* Ensure it takes centered position */
+    padding: 2rem;
+    max-width: 800px; /* Control the width to ensure it fits nicely */
+    display: block;
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    justify-content: center; /* Center the cards inside the offer__section */
+    gap: 2rem;
+}
+
+.card {
+    background: var(--color-bg-variant);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    max-width: 300px;
+    text-align: left; /* Optional: keep text aligned to the left within the cards */
+}
+
+/* Responsive settings */
+@media (max-width: 768px) {
+    .offer__section {
+        max-width: 100%; /* Full width for smaller devices */
+        padding: 1.5rem;
+    }
+    .grid {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center;
+    }
+}
+
+
+
+/* Container for navigation buttons and image */
+.image-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+/* Styling the image */
+.image-navigation img {
+    width: 350px; /* Controls the image size */
+    height: auto;
+    max-width: 100%;
+    border-radius: 1rem;
+    transition: transform 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+.image-navigation img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Button styles for navigation */
+.image-navigation button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.image-navigation button:hover {
+    background-color: var(--color-primary-variant); /* Lighter color on hover */
+}
+
+.image-navigation-title {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+        color: white;
+
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .image-navigation img {
+        width: 80%; /* Resize image on smaller screens */
+    }
+
+    .image-navigation button {
+        padding: 0.6rem;
+        font-size: 1.2rem; /* Resize buttons for smaller screens */
+    }
+}
+
+
+.image-wrapper {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.full-screen-label {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.close-modal, .modal-prev, .modal-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+
+.close-modal {
+    top: 10%;
+    right: 10%;
+    cursor: pointer;
+}
+
+.modal-prev {
+    left: 5%;
+    cursor: pointer;
+}
+
+.modal-next {
+    right: 5%;
+    cursor: pointer;
+}
+
