@@ -1,8 +1,5 @@
-[[redirects]]
-from = "/*"
-to = "/index.html"
-
-
-status = 200
-
+[build]
+base = "drvena-gragja"
+publish = "build"
+command = "npm run build"
 
