@@ -60,10 +60,15 @@ section#portfolio {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 740px) {
     .portfolio__container {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .portfolio__item-cta .btn {
+        height: 3.5rem;
+        width: 9.2rem;
     }
 }
 
