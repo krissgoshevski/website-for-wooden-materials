@@ -259,25 +259,7 @@ section#about {
         font-size: 1.2rem;
         /* Resize buttons for smaller screens */
     }
-    .modal-prev {
-        left: 9.5%;
-        cursor: pointer;
-
-        transform: translateX(-90%);
-    }
-
-    .modal-next {
-        right: 9.5%;
-        cursor: pointer;
-        transform: translateX(90%);
-    }
-
-    .close-modal {
-        top: 10%;
-        right: 1%;
-        cursor: pointer;
-        color: var(--color-primary);
-    }
+   
 }
 
 
@@ -361,3 +343,27 @@ section#about {
     cursor: pointer;
     transform: translateX(90%);
 }
+
+@media screen and (max-width: 600px) {
+    .modal-prev {
+        left: 9.5%;
+        cursor: pointer;
+
+        transform: translateX(-90%);
+    }
+
+    .modal-next {
+        right: 9.5%;
+        cursor: pointer;
+        transform: translateX(90%);
+    }
+
+    .close-modal {
+        top: 10%;
+        right: 1%;
+        cursor: pointer;
+        color: var(--color-primary);
+    }
+
+}
+
