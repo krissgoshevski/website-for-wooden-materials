@@ -1,5 +1,4 @@
 [build]
-base = "drvena-gragja"
 publish = "build"
 command = "npm run build"
 

@@ -3,24 +3,30 @@ section#testimonials {
 }
 
 .container.testimonials__container {
-    width: 40%;
+    width: 80%;
     padding-bottom: 4rem;
 }
 
 .client__avatar {
     display: flex;
-    align-items: center; /* Aligns items vertically */
+    align-items: center;
+    /* Aligns items vertically */
 }
 
 .grouped-avatars {
-    display: flex; /* Displays grouped avatars in a row */
-    gap: 10px; /* Space between the two images */
+    display: flex;
+    /* Displays grouped avatars in a row */
+    gap: 10px;
+    /* Space between the two images */
 }
 
 .client__avatar img {
-    width: 50%; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10%; /* Optional: make avatars circular */
+    width: 50%;
+    /* Adjust width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 10%;
+    /* Optional: make avatars circular */
 }
 
 .testimonials {
@@ -30,7 +36,8 @@ section#testimonials {
     user-select: none;
 }
 
-.clients__review { /* Fixed class name */
+.clients__review {
+    /* Fixed class name */
     color: var(--color-light);
     font-weight: 300;
     display: block;
@@ -42,7 +49,7 @@ section#testimonials {
 
 @media screen and (max-width: 1024px) {
     .container.testimonials__container {
-        width: 60%;
+        width: 80%;
     }
 }
 

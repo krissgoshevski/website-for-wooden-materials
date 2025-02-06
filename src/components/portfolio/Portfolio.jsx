@@ -135,7 +135,6 @@ const Portfolio = () => {
                     <div className='modal-content'>
                         <span className='close' onClick={closeModal}>&times;</span>
                         <h3 className='modal-title'>{currentItem.title}</h3>
-                        <div className='spacer'></div> {/* Spacer for blank space */}
                         <p className='modal-description'>{currentItem.description}</p>
 
                         {/* Accordion for Sizes */}
